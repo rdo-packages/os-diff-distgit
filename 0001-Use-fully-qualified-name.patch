@@ -1,0 +1,166 @@
+From 6bcb310d19b447dc661d72d4187f54f1beea7408 Mon Sep 17 00:00:00 2001
+From: Joel Capitao <jcapitao@redhat.com>
+Date: Mon, 4 Mar 2024 12:48:53 +0100
+Subject: [PATCH] Use fully-qualified name
+
+By default, when running "go mod init", Go sets the module with
+fully-qualified name which is a best-practise.
+---
+ cmd/cfg-diff.go           | 2 +-
+ cmd/configmap.go          | 2 +-
+ cmd/diff.go               | 2 +-
+ cmd/generate.go           | 2 +-
+ cmd/pull.go               | 4 ++--
+ cmd/root.go               | 2 +-
+ go.mod                    | 2 +-
+ main.go                   | 2 +-
+ pkg/collectcfg/fetch.go   | 2 +-
+ pkg/servicecfg/service.go | 2 +-
+ pkg/servicecfg/utils.go   | 2 +-
+ 11 files changed, 12 insertions(+), 12 deletions(-)
+
+diff --git a/cmd/cfg-diff.go b/cmd/cfg-diff.go
+index 1707e3d..380c294 100644
+--- a/cmd/cfg-diff.go
++++ b/cmd/cfg-diff.go
+@@ -17,7 +17,7 @@
+ package cmd
+ 
+ import (
+-	"os-diff/pkg/servicecfg"
++	"github.com/openstack-k8s-operators/os-diff/pkg/servicecfg"
+ 
+ 	"github.com/spf13/cobra"
+ )
+diff --git a/cmd/configmap.go b/cmd/configmap.go
+index e0fa7c1..a0336ac 100644
+--- a/cmd/configmap.go
++++ b/cmd/configmap.go
+@@ -18,7 +18,7 @@ package cmd
+ 
+ import (
+ 	"fmt"
+-	"os-diff/pkg/servicecfg"
++	"github.com/openstack-k8s-operators/os-diff/pkg/servicecfg"
+ 
+ 	"github.com/spf13/cobra"
+ )
+diff --git a/cmd/diff.go b/cmd/diff.go
+index ca398c9..016cd59 100644
+--- a/cmd/diff.go
++++ b/cmd/diff.go
+@@ -19,7 +19,7 @@ package cmd
+ import (
+ 	"fmt"
+ 	"os"
+-	"os-diff/pkg/godiff"
++	"github.com/openstack-k8s-operators/os-diff/pkg/godiff"
+ 
+ 	"github.com/spf13/cobra"
+ )
+diff --git a/cmd/generate.go b/cmd/generate.go
+index a2d3d7c..096040b 100644
+--- a/cmd/generate.go
++++ b/cmd/generate.go
+@@ -17,7 +17,7 @@
+ package cmd
+ 
+ import (
+-	"os-diff/pkg/servicecfg"
++	"github.com/openstack-k8s-operators/os-diff/pkg/servicecfg"
+ 
+ 	"github.com/spf13/cobra"
+ )
+diff --git a/cmd/pull.go b/cmd/pull.go
+index 2404f3c..341ab91 100644
+--- a/cmd/pull.go
++++ b/cmd/pull.go
+@@ -18,8 +18,8 @@ package cmd
+ 
+ import (
+ 	"fmt"
+-	"os-diff/pkg/collectcfg"
+-	"os-diff/pkg/common"
++	"github.com/openstack-k8s-operators/os-diff/pkg/collectcfg"
++	"github.com/openstack-k8s-operators/os-diff/pkg/common"
+ 
+ 	"github.com/spf13/cobra"
+ 	"github.com/spf13/viper"
+diff --git a/cmd/root.go b/cmd/root.go
+index d9aff01..306f62f 100644
+--- a/cmd/root.go
++++ b/cmd/root.go
+@@ -19,7 +19,7 @@ package cmd
+ import (
+ 	"fmt"
+ 	"os"
+-	"os-diff/pkg/common"
++	"github.com/openstack-k8s-operators/os-diff/pkg/common"
+ 
+ 	"github.com/spf13/cobra"
+ 	"github.com/spf13/viper"
+diff --git a/go.mod b/go.mod
+index 4714236..7eaecf8 100644
+--- a/go.mod
++++ b/go.mod
+@@ -1,4 +1,4 @@
+-module os-diff
++module github.com/openstack-k8s-operators/os-diff
+ 
+ go 1.19
+ 
+diff --git a/main.go b/main.go
+index f8eb227..51237ac 100644
+--- a/main.go
++++ b/main.go
+@@ -16,7 +16,7 @@
+  */
+ package main
+ 
+-import "os-diff/cmd"
++import "github.com/openstack-k8s-operators/os-diff/cmd"
+ 
+ func main() {
+ 	cmd.Execute()
+diff --git a/pkg/collectcfg/fetch.go b/pkg/collectcfg/fetch.go
+index f847eda..b107087 100644
+--- a/pkg/collectcfg/fetch.go
++++ b/pkg/collectcfg/fetch.go
+@@ -21,7 +21,7 @@ import (
+ 	"encoding/json"
+ 	"fmt"
+ 	"os"
+-	"os-diff/pkg/common"
++	"github.com/openstack-k8s-operators/os-diff/pkg/common"
+ 	"os/exec"
+ 	"path"
+ 	"strings"
+diff --git a/pkg/servicecfg/service.go b/pkg/servicecfg/service.go
+index f99ac53..92faef2 100644
+--- a/pkg/servicecfg/service.go
++++ b/pkg/servicecfg/service.go
+@@ -20,7 +20,7 @@ import (
+ 	"fmt"
+ 	"log"
+ 	"os"
+-	"os-diff/pkg/godiff"
++	"github.com/openstack-k8s-operators/os-diff/pkg/godiff"
+ 	"path/filepath"
+ 	"strings"
+ 
+diff --git a/pkg/servicecfg/utils.go b/pkg/servicecfg/utils.go
+index 2428a56..25a317d 100644
+--- a/pkg/servicecfg/utils.go
++++ b/pkg/servicecfg/utils.go
+@@ -19,7 +19,7 @@ package servicecfg
+ import (
+ 	"fmt"
+ 	"io/ioutil"
+-	"os-diff/pkg/godiff"
++	"github.com/openstack-k8s-operators/os-diff/pkg/godiff"
+ 	"os/exec"
+ 	"strings"
+ )
+-- 
+2.43.2
+
