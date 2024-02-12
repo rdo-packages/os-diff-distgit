@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7d363328_708ae8e0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 289
+      },
+      "writtenOn": "2024-02-12T15:26:19Z",
+      "side": 1,
+      "message": "I\u0027m not a packager but LGTM :)",
+      "revId": "b684f532c8337523bb153c4ac0ff3dab79ed5f0a",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
