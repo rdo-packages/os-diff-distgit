@@ -16,6 +16,24 @@
       "message": "Some comments:\n\n- CI jobs are not triggering for some reasons, i will investigate.\n- good practices for golang packages in fedora are in https://docs.fedoraproject.org/en-US/packaging-guidelines/Golang/ , it provides multiple macros that may help to improve the spec.\n- I see this package requires other golang libs (https://github.com/openstack-k8s-operators/os-diff/blob/main/go.mod). The options for managing are:\n  1. Building packages which include the sources to be used as BuildRequires (default option).\n  2. Bundling the code for those in the package.\n  Note that, pulling the dependencies from upstream while building will not work, packaging environment should be isolated and selfcontained, all the content has to come from packages, not from pulling packages in native language ways.",
       "revId": "224d9f896f05f765e274c2ad674883fe83b9b30e",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a3f4438_b261c652",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2024-02-13T09:06:29Z",
+      "side": 1,
+      "message": "One more, this is the first golang package we try to build in DLRN, we should expect issues in guessing the version, i.e. we don\u0027t have logic for go packages in dlrn currently.",
+      "parentUuid": "386675f4_8c070e60",
+      "revId": "224d9f896f05f765e274c2ad674883fe83b9b30e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
