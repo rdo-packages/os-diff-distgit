@@ -51,6 +51,23 @@
       "message": "https://review.rdoproject.org/r/c/config/+/51664 should add the ci jobs",
       "revId": "224d9f896f05f765e274c2ad674883fe83b9b30e",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b98ef07_f539ca98",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-02-13T09:30:00Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "224d9f896f05f765e274c2ad674883fe83b9b30e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
