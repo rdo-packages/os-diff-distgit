@@ -86,6 +86,52 @@
       "parentUuid": "6a3f4438_b261c652",
       "revId": "224d9f896f05f765e274c2ad674883fe83b9b30e",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "88fd513c_81210844",
+        "filename": "os-diff.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-02-13T10:30:00Z",
+      "side": 1,
+      "message": "without .txt",
+      "range": {
+        "startLine": 51,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 6
+      },
+      "revId": "224d9f896f05f765e274c2ad674883fe83b9b30e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2ffe8f0f_2cabc324",
+        "filename": "os-diff.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-02-13T10:30:00Z",
+      "side": 1,
+      "message": "there is no CHANGES.md in https://github.com/openstack-k8s-operators/os-diff",
+      "range": {
+        "startLine": 53,
+        "startChar": 0,
+        "endLine": 53,
+        "endChar": 6
+      },
+      "revId": "224d9f896f05f765e274c2ad674883fe83b9b30e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
