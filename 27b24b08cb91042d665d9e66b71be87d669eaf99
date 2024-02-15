@@ -16,6 +16,24 @@
       "message": "@Alfredo and Joel, I have got this error [1] I don\u0027t really get it, looks like the Requires packages are filtered out from epel\n\n[1]\nProblem 1: conflicting requests\n  - package golang-github-spf13-cobra-devel-1.7.0-2.el9.noarch from epel-low-priority is filtered out by exclude filtering\n Problem 2: conflicting requests\n  - package golang-gopkg-ini-1-devel-1.67.0-3.el9.noarch from epel-low-priority is filtered out by exclude filtering\n Problem 3: conflicting requests\n  - package golang-gopkg-yaml-2-devel-2.4.0-11.el9.noarch from epel-low-priority is filtered out by exclude filtering\n Problem 4: conflicting requests\n  - package golang-gopkg-yaml-3-devel-3.0.1-7.el9.noarch from epel-low-priority is filtered out by exclude filtering",
       "revId": "27b24b08cb91042d665d9e66b71be87d669eaf99",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a33b1558_7ecd6352",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-02-15T08:44:42Z",
+      "side": 1,
+      "message": "The error message is confusing, but basically it means that RDO is missing golang-github-spf13-cobra golang-gopkg-ini and golang-gopkg-yaml dependencies\nThe fact that we have \"from epel-low-priority is filtered out by exclude filtering\" is because we have to enabled EPEL repo just for Ceph packages provided by the Storage SIG (more information in [1])\nSo, the solution here is to add those dependencies in RDO\nfollowing this doc [2]. I see the deps are in Fedora [3][4][5].\n\n[1] https://www.rdoproject.org/install/install-with-ceph/\n[2] https://www.rdoproject.org/documentation/requirements/#adding-a-new-requirement-to-rdo\n[3] https://src.fedoraproject.org/rpms/golang-gopkg-ini-1\n[4] https://src.fedoraproject.org/rpms/golang-github-spf13-cobra\n[5] https://src.fedoraproject.org/rpms/golang-gopkg-yaml-3",
+      "parentUuid": "dd09a5b8_7a0cd175",
+      "revId": "27b24b08cb91042d665d9e66b71be87d669eaf99",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
