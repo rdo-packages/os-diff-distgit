@@ -1,17 +1,21 @@
-Name: os-diff
+%global debug_package %{nil}
+
+Name:          os-diff
 Version: XXX
 Release: XXX
-Summary: Diff tool for Openstack and Openshift services configuration.
-License: ASL 2.0
-URL: https://github.com/openstack-k8s-operators/os-diff
-Source: https://github.com/openstack-k8s-operators/os-diff
+Summary:       Diff tool for Openstack and Openshift services configuration.
+License:       ASL 2.0
+URL:           https://github.com/openstack-k8s-operators/os-diff
+Source:        https://github.com/openstack-k8s-operators/os-diff
+Patch0001:     0001-WIP.patch
 
 BuildRequires: curl
 BuildRequires: git
 BuildRequires: golang
-BuildRequires: golang-gopkg-ini-1-devel
+BuildRequires: compat-golang-github-ini-devel
+BuildRequires: compat-golang-github-sirupsen-logrus-devel
 BuildRequires: golang-github-spf13-cobra-devel
-BuildRequires: golang-gopkg-yaml-2-devel
+BuildRequires: golang-github-spf13-viper-devel
 BuildRequires: golang-gopkg-yaml-3-devel
 BuildRequires: make
 
@@ -20,10 +24,13 @@ Diff tool for Openstack and Openshift services configuration.
 
 %prep
 %setup
+%autopatch -p1
 
 %build
-
-# Build the binary:
+export GO111MODULE=off
+export GOPATH="$PWD:/usr/share/gocode/"
+mkdir src
+ln -s $PWD src/os-diff
 make build
 
 %install

@@ -1,0 +1,100 @@
+From 1e8176de5987178846b7b3d6bb5b4582a8fcffdf Mon Sep 17 00:00:00 2001
+From: Joel Capitao <jcapitao@redhat.com>
+Date: Thu, 29 Feb 2024 17:52:53 +0100
+Subject: [PATCH] WIP
+
+---
+ go.mod                    | 2 --
+ pkg/collectcfg/fetch.go   | 2 +-
+ pkg/godiff/utils.go       | 2 +-
+ pkg/servicecfg/cinder.go  | 2 +-
+ pkg/servicecfg/glance.go  | 2 +-
+ pkg/servicecfg/service.go | 2 +-
+ 6 files changed, 5 insertions(+), 7 deletions(-)
+
+diff --git a/go.mod b/go.mod
+index c63d097..4714236 100644
+--- a/go.mod
++++ b/go.mod
+@@ -4,7 +4,6 @@ go 1.19
+ 
+ require (
+ 	github.com/go-ini/ini v1.67.0
+-	github.com/go-yaml/yaml v2.1.0+incompatible
+ 	github.com/spf13/cobra v1.7.0
+ 	gopkg.in/yaml.v3 v3.0.1
+ )
+@@ -32,5 +31,4 @@ require (
+ 	golang.org/x/sys v0.12.0 // indirect
+ 	golang.org/x/text v0.13.0 // indirect
+ 	gopkg.in/ini.v1 v1.67.0 // indirect
+-	gopkg.in/yaml.v2 v2.4.0 // indirect
+ )
+diff --git a/pkg/collectcfg/fetch.go b/pkg/collectcfg/fetch.go
+index 9161924..f847eda 100644
+--- a/pkg/collectcfg/fetch.go
++++ b/pkg/collectcfg/fetch.go
+@@ -26,7 +26,7 @@ import (
+ 	"path"
+ 	"strings"
+ 
+-	"gopkg.in/yaml.v2"
++	"gopkg.in/yaml.v3"
+ )
+ 
+ var config Config
+diff --git a/pkg/godiff/utils.go b/pkg/godiff/utils.go
+index 0ddfe9d..a0859e2 100644
+--- a/pkg/godiff/utils.go
++++ b/pkg/godiff/utils.go
+@@ -25,7 +25,7 @@ import (
+ 	"strings"
+ 
+ 	"github.com/go-ini/ini"
+-	"github.com/go-yaml/yaml"
++	"gopkg.in/yaml.v3"
+ )
+ 
+ func stringInSlice(a string, list []string) bool {
+diff --git a/pkg/servicecfg/cinder.go b/pkg/servicecfg/cinder.go
+index 11985a1..90126a9 100644
+--- a/pkg/servicecfg/cinder.go
++++ b/pkg/servicecfg/cinder.go
+@@ -20,7 +20,7 @@ import (
+ 	"io/ioutil"
+ 	"strings"
+ 
+-	"gopkg.in/yaml.v2"
++	"gopkg.in/yaml.v3"
+ )
+ 
+ type Cinder struct {
+diff --git a/pkg/servicecfg/glance.go b/pkg/servicecfg/glance.go
+index 2b5ff88..8afa35f 100644
+--- a/pkg/servicecfg/glance.go
++++ b/pkg/servicecfg/glance.go
+@@ -20,7 +20,7 @@ import (
+ 	"io/ioutil"
+ 	"strings"
+ 
+-	"gopkg.in/yaml.v2"
++	"gopkg.in/yaml.v3"
+ )
+ 
+ type Glance struct {
+diff --git a/pkg/servicecfg/service.go b/pkg/servicecfg/service.go
+index a62b226..f99ac53 100644
+--- a/pkg/servicecfg/service.go
++++ b/pkg/servicecfg/service.go
+@@ -24,7 +24,7 @@ import (
+ 	"path/filepath"
+ 	"strings"
+ 
+-	"gopkg.in/yaml.v2"
++	"gopkg.in/yaml.v3"
+ )
+ 
+ type ParentStruct struct {
+-- 
+2.43.2
+
