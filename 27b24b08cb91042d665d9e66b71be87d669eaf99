@@ -86,6 +86,24 @@
       "parentUuid": "e5324f06_c0f3a300",
       "revId": "27b24b08cb91042d665d9e66b71be87d669eaf99",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f8e9ce72_d343df36",
+        "filename": "os-diff.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-03-01T16:19:26Z",
+      "side": 1,
+      "message": "Using the macro %gobuild enabled CGO by default. I checked to be sure.\nThanks for the heads-up",
+      "parentUuid": "33af85f5_b5b5864d",
+      "revId": "27b24b08cb91042d665d9e66b71be87d669eaf99",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
