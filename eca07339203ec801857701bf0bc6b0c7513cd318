@@ -34,6 +34,24 @@
       "parentUuid": "bcdf50cc_e2ee7c90",
       "revId": "eca07339203ec801857701bf0bc6b0c7513cd318",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0bf1a996_643c37a2",
+        "filename": "os-diff.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-03-04T14:08:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8e1724e4_14587602",
+      "revId": "eca07339203ec801857701bf0bc6b0c7513cd318",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
