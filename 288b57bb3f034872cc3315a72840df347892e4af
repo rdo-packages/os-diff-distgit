@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6ceb798d_1521b05f",
+        "filename": "golang-github-openstack-k8s-operators-os-diff.spec",
+        "patchSetId": 16
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-03-06T11:46:19Z",
+      "side": 1,
+      "message": "Note that the condition here is useless, b/c if it does not exist then the build will fail when adding the file in %files section (i.e l.92)\nSame for other configuration files",
+      "revId": "288b57bb3f034872cc3315a72840df347892e4af",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a63a5800_f1d8c226",
+        "filename": "golang-github-openstack-k8s-operators-os-diff.spec",
+        "patchSetId": 16
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-03-06T11:46:19Z",
+      "side": 1,
+      "message": "should be removed",
+      "range": {
+        "startLine": 88,
+        "startChar": 3,
+        "endLine": 88,
+        "endChar": 16
+      },
+      "revId": "288b57bb3f034872cc3315a72840df347892e4af",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
