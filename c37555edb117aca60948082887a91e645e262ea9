@@ -22,6 +22,30 @@
       },
       "revId": "c37555edb117aca60948082887a91e645e262ea9",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "754e37ad_388de853",
+        "filename": "golang-github-openstack-k8s-operators-os-diff.spec",
+        "patchSetId": 18
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-03-07T10:28:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6214c447_8b7f4f9f",
+      "range": {
+        "startLine": 25,
+        "startChar": 24,
+        "endLine": 25,
+        "endChar": 31
+      },
+      "revId": "c37555edb117aca60948082887a91e645e262ea9",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
