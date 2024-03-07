@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6214c447_8b7f4f9f",
+        "filename": "golang-github-openstack-k8s-operators-os-diff.spec",
+        "patchSetId": 18
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2024-03-07T10:17:16Z",
+      "side": 1,
+      "message": "nit, this should be  Apache-2.0 for spdx standard (fedora guidelines).",
+      "range": {
+        "startLine": 25,
+        "startChar": 24,
+        "endLine": 25,
+        "endChar": 31
+      },
+      "revId": "c37555edb117aca60948082887a91e645e262ea9",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
