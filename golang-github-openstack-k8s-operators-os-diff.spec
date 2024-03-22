@@ -91,3 +91,4 @@ mv ssh.config %{buildroot}%{_sysconfdir}/os-diff/ssh.config
 %{_bindir}/*
 
 %changelog
+# REMOVEME: error caused by commit https://github.com/openstack-k8s-operators/os-diff/commit/07141a42369911de46cfdf0bd46e7a09d4eab8bf
