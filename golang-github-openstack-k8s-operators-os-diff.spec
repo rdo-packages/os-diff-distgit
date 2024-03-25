@@ -5,6 +5,7 @@
 
 # The macro %%gometa needs Version:, %{commit} or %{tag} to be defined
 # before the macro invocation, but as we set XXX as Version for DLRN, it fails.
+
 # So we add a dummy tag and remove the distprefix (i.e .git<tag>) which
 # is added at the end of the RPM if a tag is defined.
 # At the end, it's a noop operation and the macro does not fail anymore
