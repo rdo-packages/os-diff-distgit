@@ -82,6 +82,9 @@ mv config.yaml %{buildroot}%{_sysconfdir}/os-diff/config.yaml
 # Move ssh.config file to sysconfdir
 mv ssh.config %{buildroot}%{_sysconfdir}/os-diff/ssh.config
 
+%check
+%gocheck
+
 %files
 %config(noreplace) %attr(0644, root, root) %{_sysconfdir}/os-diff/os-diff.cfg
 %config(noreplace) %attr(0644, root, root) %{_sysconfdir}/os-diff/ssh.config
