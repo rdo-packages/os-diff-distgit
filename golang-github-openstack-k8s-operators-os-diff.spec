@@ -3,13 +3,6 @@
 # https://github.com/openstack-k8s-operators/os-diff
 %global goipath         github.com/openstack-k8s-operators/os-diff
 
-# The macro %%gometa needs Version:, %{commit} or %{tag} to be defined
-# before the macro invocation, but as we set XXX as Version for DLRN, it fails.
-# So we add a dummy tag and remove the distprefix (i.e .git<tag>) which
-# is added at the end of the RPM if a tag is defined.
-# At the end, it's a noop operation and the macro does not fail anymore
-%{?dlrn: %global tag        0}
-%{?dlrn: %global distprefix %{nil}}
 # By default extractdir = %{repo}-%{version} with repo = os-diff
 # but DLRN generates tarball with <project_name>-<version> as tarball name.
 # FTR goname = project_name
@@ -19,8 +12,8 @@
 %gometa -v
 
 Name:                   %{goname}
-Version:                XXX
-Release:                XXX
+Version:                0.1.0
+Release:                1%{?dist}
 Summary:                Diff tool for Openstack and Openshift services configuration.
 License:                Apache-2.0
 URL:                    %{gourl}
@@ -94,3 +87,6 @@ mv ssh.config %{buildroot}%{_sysconfdir}/os-diff/ssh.config
 %{_bindir}/*
 
 %changelog
+* Wed Oct 02 2024 Joel Capitao <jcapitao@redhat.com> 0.1.0-1
+- Update to 0.1.0-1
+
