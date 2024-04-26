@@ -15,7 +15,11 @@
 # https://github.com/openstack-k8s-operators/os-diff
 %global goipath         github.com/openstack-k8s-operators/os-diff
 # Version should be defined before %%gometa
+<<<<<<< HEAD   (43a214 ManageSF commit)
 Version:                XXX
+=======
+Version:                0.1.0
+>>>>>>> CHANGE (be748d golang-github-openstack-k8s-operators-os-diff-0.1.0-1)
 
 # Be verbose and print every spec variable the macro sets.
 %gometa -v
@@ -23,7 +27,11 @@ Version:                XXX
 %global ref %{version}
 
 Name:                   %{goname}
+<<<<<<< HEAD   (43a214 ManageSF commit)
 Release:                XXX
+=======
+Release:                1%{?dist}
+>>>>>>> CHANGE (be748d golang-github-openstack-k8s-operators-os-diff-0.1.0-1)
 Summary:                Diff tool for Openstack and Openshift services configuration.
 License:                Apache-2.0
 URL:                    %{gourl}
@@ -97,3 +105,6 @@ mv ssh.config %{buildroot}%{_sysconfdir}/os-diff/ssh.config
 %{_bindir}/*
 
 %changelog
+* Wed Oct 02 2024 Joel Capitao <jcapitao@redhat.com> 0.1.0-1
+- Update to 0.1.0-1
+
