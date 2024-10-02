@@ -1,8 +1,5 @@
 %global debug_package %{nil}
 
-# https://github.com/openstack-k8s-operators/os-diff
-%global goipath         github.com/openstack-k8s-operators/os-diff
-
 # The macro %%gometa needs Version:, %{commit} or %{tag} to be defined
 # before the macro invocation, but as we set XXX as Version for DLRN, it fails.
 # So we add a dummy tag and remove the distprefix (i.e .git<tag>) which
@@ -15,11 +12,17 @@
 # FTR goname = project_name
 %{?dlrn: %global extractdir %{goname}-%{version}}
 
+# https://github.com/openstack-k8s-operators/os-diff
+%global goipath         github.com/openstack-k8s-operators/os-diff
+# Version should be defined before %%gometa
+Version:                XXX
+
 # Be verbose and print every spec variable the macro sets.
 %gometa -v
+# by default ref=v%{version} but upstream project issue tag without 'v' prefix
+%global ref %{version}
 
 Name:                   %{goname}
-Version:                XXX
 Release:                XXX
 Summary:                Diff tool for Openstack and Openshift services configuration.
 License:                Apache-2.0
