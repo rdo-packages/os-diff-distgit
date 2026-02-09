@@ -100,3 +100,4 @@ mv ssh.config %{buildroot}%{_sysconfdir}/os-diff/ssh.config
 * Wed Oct 02 2024 Joel Capitao <jcapitao@redhat.com> 0.1.0-1
 - Update to 0.1.0-1
 
+# REMOVEME: error caused by commit https://github.com/openstack-k8s-operators/os-diff/commit/32d52e70c1dd88df8a625f7b9dd2bab974b03777
