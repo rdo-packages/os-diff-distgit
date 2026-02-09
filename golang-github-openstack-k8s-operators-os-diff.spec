@@ -28,6 +28,7 @@ Summary:                Diff tool for Openstack and Openshift services configura
 License:                Apache-2.0
 URL:                    %{gourl}
 Source:                 %{gosource}
+Patch0001:              fix.patch
 
 # ./vendor2provides.py os-diff-%%{version}/vendor/modules.txt
 Provides:               bundled(golang(github.com/fsnotify/fsnotify)) = 1.6.0
@@ -64,6 +65,7 @@ Diff tool for Openstack and Openshift services configuration.
 
 %prep
 %goprep -k
+%patch0001 -p1
 
 %build
 %gobuild -o bin/os-diff %{goipath}

@@ -1,0 +1,28 @@
+From 6ca693c3387f4a366b7d868ae654d4c64c6d467a Mon Sep 17 00:00:00 2001
+From: Luca Miccini <lmiccini@redhat.com>
+Date: Mon, 23 Mar 2026 08:55:39 +0100
+Subject: [PATCH] Fix non-constant format string in fmt.Errorf call
+
+go vet flags string concatenation used as the format argument
+to fmt.Errorf as a potential format-string injection issue.
+Use %s placeholder instead, which fixes the RPM build failure
+during the %check phase.
+
+Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>
+---
+ pkg/collectcfg/fetch.go | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/pkg/collectcfg/fetch.go b/pkg/collectcfg/fetch.go
+index 3feae86..18f7f98 100644
+--- a/pkg/collectcfg/fetch.go
++++ b/pkg/collectcfg/fetch.go
+@@ -252,7 +252,7 @@ func GetListHosts(undercloud string) []string {
+ 
+ func CleanUp(remotePath string, sshCmd string) error {
+ 	if remotePath == "" || remotePath == "/" {
+-		return fmt.Errorf("Clean up Error - Empty or wrong path: " + remotePath + ". Please make sure you provided a correct path.")
++		return fmt.Errorf("Clean up Error - Empty or wrong path: %s. Please make sure you provided a correct path.", remotePath)
+ 	}
+ 	if Sudo {
+ 		sshCmd = sshCmd + " sudo "
