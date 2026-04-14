@@ -30,6 +30,8 @@ URL:                    %{gourl}
 Source:                 %{gosource}
 
 # ./vendor2provides.py os-diff-%%{version}/vendor/modules.txt
+
+Provides:               bundled(golang(github.com/davecgh/go-spew)) = d8f796a
 Provides:               bundled(golang(github.com/fsnotify/fsnotify)) = 1.6.0
 Provides:               bundled(golang(github.com/go-ini/ini)) = 1.67.0
 Provides:               bundled(golang(github.com/hashicorp/hcl)) = 1.0.0
@@ -37,16 +39,17 @@ Provides:               bundled(golang(github.com/inconshreveable/mousetrap)) = 
 Provides:               bundled(golang(github.com/magiconair/properties)) = 1.8.7
 Provides:               bundled(golang(github.com/mitchellh/mapstructure)) = 1.5.0
 Provides:               bundled(golang(github.com/pelletier/go-toml/v2)) = 2.1.0
+Provides:               bundled(golang(github.com/pmezard/go-difflib)) = 5d4384e
 Provides:               bundled(golang(github.com/sagikazarmark/locafero)) = 0.3.0
 Provides:               bundled(golang(github.com/sagikazarmark/slog-shim)) = 0.1.0
-Provides:               bundled(golang(github.com/sirupsen/logrus)) = 1.9.0
+Provides:               bundled(golang(github.com/sirupsen/logrus)) = 1.9.3
 Provides:               bundled(golang(github.com/sourcegraph/conc)) = 0.3.0
 Provides:               bundled(golang(github.com/spf13/afero)) = 1.10.0
 Provides:               bundled(golang(github.com/spf13/cast)) = 1.5.1
 Provides:               bundled(golang(github.com/spf13/cobra)) = 1.7.0
 Provides:               bundled(golang(github.com/spf13/pflag)) = 1.0.5
 Provides:               bundled(golang(github.com/spf13/viper)) = 1.17.0
-Provides:               bundled(golang(github.com/stretchr/testify)) = 1.8.4
+Provides:               bundled(golang(github.com/stretchr/testify)) = 1.9.0
 Provides:               bundled(golang(github.com/subosito/gotenv)) = 1.6.0
 Provides:               bundled(golang(go.uber.org/atomic)) = 1.9.0
 Provides:               bundled(golang(go.uber.org/multierr)) = 1.9.0
