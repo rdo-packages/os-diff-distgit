@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5b43b1ad_ada50096",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2026-06-02T14:52:37Z",
+      "side": 1,
+      "message": "simple backport, syncing antelope-rdo to rpm-master",
+      "revId": "c956849374db3c58c957e70215cae2bb2fcf9414",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
