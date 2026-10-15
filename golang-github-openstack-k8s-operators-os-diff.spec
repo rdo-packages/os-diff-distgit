@@ -100,3 +100,4 @@ mv ssh.config %{buildroot}%{_sysconfdir}/os-diff/ssh.config
 %{_bindir}/*
 
 %changelog
+
