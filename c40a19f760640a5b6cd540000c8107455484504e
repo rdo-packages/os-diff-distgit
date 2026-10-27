@@ -33,6 +33,41 @@
       "message": "I miss context on the change and the end to end approach to manage os-diff, resetting my vote to neutral.",
       "revId": "c40a19f760640a5b6cd540000c8107455484504e",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "afa3455e_d7efc02d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2026-10-27T10:53:13Z",
+      "side": 1,
+      "message": "it\u0027s a cleanup to avoid keep rebuilding it due to constant incoming stream of golang CVEs, both upstream and downstream",
+      "parentUuid": "66b5247b_d81bd1c6",
+      "revId": "c40a19f760640a5b6cd540000c8107455484504e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a82c5929_cff52242",
+        "filename": "golang-github-openstack-k8s-operators-os-diff.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2026-10-27T10:53:13Z",
+      "side": 1,
+      "message": "same as in rpm-master, let\u0027s remove this too?",
+      "revId": "c40a19f760640a5b6cd540000c8107455484504e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
