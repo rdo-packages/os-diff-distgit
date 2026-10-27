@@ -16,6 +16,47 @@
       "message": "the os-diff package was retired from epoxy and newer releases in RDO in https://github.com/redhat-openstack/rdoinfo/commit/e891d01681bc7a5063e953c7b11f780b33b21231 so this change should not be needed i guess",
       "revId": "b88e4117ed56ee372f32eff77942366b673f1182",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d7186730_3fe8d262",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2026-10-27T10:50:23Z",
+      "side": 1,
+      "message": "let\u0027s still clean it up in RDO distgit",
+      "parentUuid": "b7ff64fc_bcdaf243",
+      "revId": "b88e4117ed56ee372f32eff77942366b673f1182",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "07f75ba1_ec665f48",
+        "filename": "golang-github-openstack-k8s-operators-os-diff.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2026-10-27T10:50:23Z",
+      "side": 1,
+      "message": "let\u0027s drop that too ?",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 10
+      },
+      "revId": "b88e4117ed56ee372f32eff77942366b673f1182",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
