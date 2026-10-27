@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5e810081_5dd71f6c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2026-10-27T09:33:08Z",
+      "side": 1,
+      "message": "I doubt we want to do this in antelope branch. os-diff is pinned to last known good content and i think it should be kept for backwards compatibility in the stable release.",
+      "revId": "c40a19f760640a5b6cd540000c8107455484504e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
