@@ -68,6 +68,24 @@
       "message": "same as in rpm-master, let\u0027s remove this too?",
       "revId": "c40a19f760640a5b6cd540000c8107455484504e",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc511b27_441b0fbb",
+        "filename": "golang-github-openstack-k8s-operators-os-diff.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 747
+      },
+      "writtenOn": "2026-10-27T11:25:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a82c5929_cff52242",
+      "revId": "c40a19f760640a5b6cd540000c8107455484504e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
