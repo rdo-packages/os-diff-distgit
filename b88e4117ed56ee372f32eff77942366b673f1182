@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b7ff64fc_bcdaf243",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2026-10-27T09:37:52Z",
+      "side": 1,
+      "message": "the os-diff package was retired from epoxy and newer releases in RDO in https://github.com/redhat-openstack/rdoinfo/commit/e891d01681bc7a5063e953c7b11f780b33b21231 so this change should not be needed i guess",
+      "revId": "b88e4117ed56ee372f32eff77942366b673f1182",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
