@@ -44,4 +44,3 @@ this package installs no files so upgrades remove them.
 %files
 
 %changelog
-
